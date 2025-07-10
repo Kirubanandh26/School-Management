@@ -1,0 +1,28 @@
+from . import*
+from fastapi import APIRouter
+
+api_router=APIRouter()
+
+api_router.include_router(login.router, tags=["Login"])
+api_router.include_router(crud_user.router, tags=["User CRUD"])
+api_router.include_router(crud_section.router, tags=["Section CRUD"])
+api_router.include_router(crud_standard.router, tags=["Standard CRUD"])
+api_router.include_router(crud_class.router, tags=["Class CRUD"])
+# api_router.include_router(crud_attendance.router, tags=["Attendance CRUD"])
+api_router.include_router(crud_mark.router, tags=["Mark CRUD"])
+api_router.include_router(crud_branch.router, tags=["Branch CRUD"])
+api_router.include_router(crud_subject.router, tags=["Subject CRUD"])
+api_router.include_router(crud_term.router, tags=["Term CRUD"])
+api_router.include_router(crud_time_table.router, tags=["Time Table CRUD"])
+api_router.include_router(crud_exam.router, tags=["Exam CRUD"])
+api_router.include_router(crud_scholorship.router, tags=["Scholorship CRUD"])
+api_router.include_router(crud_student_scholorship.router, tags=["Student Scholorship CRUD"])
+api_router.include_router(crud_classroom.router, tags=["Classroom CRUD"])
+api_router.include_router(crud_exam_standard.router, tags=["Exam Standard CRUD"])
+api_router.include_router(crud_academic_data.router, tags=["Academic data CRUD"])
+api_router.include_router(crud_class_subject.router, tags=["Class Subject CRUD"])
+api_router.include_router(crud_class_timetable.router, tags=["Class Timetable CRUD"])
+api_router.include_router(crud_exam_standard.router, tags=["Exam Standard CRUD"])
+api_router.include_router(crud_fees.router, tags=["Fees CRUD"])
+api_router.include_router(password_reset.router, tags=["Password Reset"])
+api_router.include_router(crud_leave_request.router, tags=["Leave Request CRUD"])
